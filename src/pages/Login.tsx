@@ -187,14 +187,22 @@ function Login() {
                                     <div className='flex flex-row items-center justify-between ml-1 mr-1'>
                                         <div className='login-btn-devider'/> OR <div className='login-btn-devider'/>
                                     </div>
-                                    <IonButton className='buy-nft-btn mt-4 h-11'color='medium' onClick={()=> window.open('https://magiceden.io/marketplace/soldecoder', "_blank")}>
-                                        <img src={meLogo} className="me-logo mr-2"/>
-                                        Buy 1 NFT to gain access
-                                    </IonButton>
-                                    <IonButton className='buy-nft-btn mt-3 h-11' color='medium' onClick={()=> window.open('https://discord.gg/sol-decoder', "_blank")}>
-                                        { <IonIcon icon={logoDiscord} className="big-emoji mr-2"/>}
-                                        Join the Discord
-                                    </IonButton>
+                                    <div className='flex flex-col gap-4 mt-4'>
+                                        <button className="group relative overflow-hidden rounded text-sm bg-gray-600 px-8 py-3 text-white transition-all duration-300 ease-out hover:bg-gradient-to-r hover:from-gray-600 hover:to-gray-400" onClick={() => window.open('https://magiceden.io/marketplace/soldecoder', "_blank")}>
+                                            <span className="ease absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-white opacity-10 transition-all duration-700 group-hover:-translate-x-40"></span>
+                                            <span className="relative flex items-center justify-center">
+                                                <img src={meLogo} className="me-logo mr-2" />
+                                                Buy 1 NFT to gain access
+                                            </span>
+                                        </button>
+                                        <button className="group relative overflow-hidden rounded text-sm bg-gray-600 px-8 py-3 text-white transition-all duration-300 ease-out hover:bg-gradient-to-r hover:from-gray-600 hover:to-gray-400" onClick={() => window.open('https://discord.gg/sol-decoder', "_blank")}>
+                                            <span className="ease absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform bg-white opacity-10 transition-all duration-700 group-hover:-translate-x-40"></span>
+                                            <span className="relative flex items-center justify-center">
+                                                {<IonIcon icon={logoDiscord} className="big-emoji mr-2" />}
+                                                Join the Discord
+                                            </span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
 
